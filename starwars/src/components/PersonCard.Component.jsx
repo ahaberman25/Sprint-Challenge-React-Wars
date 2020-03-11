@@ -26,6 +26,7 @@ const PersonCard = (props) => {
 
 
     return (
+        // all data pulled here
         <Container>
             <h1>{props.person.name}</h1>
                 <PersonalInfoContainer>
