@@ -27,6 +27,7 @@ const Films = (props) => {
     const MovieInfoUl = styled.ul`
         display: flex;
         flex-direction: column;
+        padding: 0;
     `;
     const MovieInfoLi = styled.li` 
         list-style: none;

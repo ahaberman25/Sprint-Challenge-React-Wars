@@ -22,14 +22,19 @@ const Starships = (props) => {
     `;
     const StarshipHeader = styled.p`
         font-weight: bold;
+        text-align: left;
     `;
     const StarshipUl = styled.ul`
         display: flex;
         flex-direction: row;
+        padding: 0;
+        flex-wrap: wrap;
     `;
     const StarshipLi = styled.li` 
-        padding-left: 20px;
+        width: 100%;
         list-style: none;
+        text-align: left;
+        padding-left: 20px;
     `;
 
     return (
@@ -37,7 +42,11 @@ const Starships = (props) => {
             <StarshipHeader>Starships</StarshipHeader>
             <StarshipUl>
                 {state.map(film => {
-                    return <StarshipLi>{film.data.name}</StarshipLi>
+                    if (props.starship.starships === []) {
+                        return <p>N/A</p>  
+                    } else {
+                        return <StarshipLi>{film.data.name}</StarshipLi>                      
+                    }
                 })}    
             </StarshipUl>
         </StarshipContainer>

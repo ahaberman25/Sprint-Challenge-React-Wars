@@ -23,10 +23,12 @@ const Vehicles = (props) => {
     `;
     const VehiclesHeader = styled.p`
         font-weight: bold;
+        text-align: left;
     `;
     const VehiclesUl = styled.ul`
         display: flex;
         flex-direction: row;
+        padding: 0;
     `;
     const VehiclesLi = styled.li` 
         padding-left: 20px;
