@@ -1,6 +1,8 @@
 import React from 'react';
 import PersonalInfo from './PersonalInfo.Component'
 import Films from './Films.Component'
+import Vehicles from './Vehicles.Component'
+import Starships from './Starships.Component'
 import styled from 'styled-components'
 
 const PersonCard = (props) => {
@@ -24,6 +26,8 @@ const PersonCard = (props) => {
                 <PersonalInfoContainer>
                     <PersonalInfo info={props.person} />
                     <Films movies={props.person} />
+                    <Vehicles vehicle={props.person} />
+                    <Starships starship={props.person} />
                 </PersonalInfoContainer>
         </Container>
     )

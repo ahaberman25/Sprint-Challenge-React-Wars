@@ -17,11 +17,11 @@ const App = () => {
   // get people api
   useEffect(() => {
     axios.get('https://swapi.co/api/people/')
-    .then(response => {
-      setSw(response.data.results)
-    }).catch(error => {
-      console.log(error)
-    })
+      .then(response => {
+        setSw(response.data.results)
+      }).catch(error => {
+        console.log(error)
+      })
   }, [])
 
 
@@ -41,7 +41,7 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
       <Container>
         {sw.map(item => {
-          return <PersonCard person={item} key={item.name}/>
+          return <PersonCard person={item} key={item.name} />
         })}      
       </Container>
     </div>

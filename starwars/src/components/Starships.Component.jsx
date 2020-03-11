@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 
-const Films = (props) => {
+const Starships = (props) => {
     
 
     const [state, setState] = useState([])
@@ -10,7 +10,7 @@ const Films = (props) => {
         
     useEffect(() => {
 
-        axios.all(props.movies.films.map(l => axios.get(l)))
+        axios.all(props.starship.starships.map(l => axios.get(l)))
             .then(res => {
                 // all requests are now complete
                 console.log(res)
@@ -25,15 +25,15 @@ const Films = (props) => {
 
     return (
         <MovieInfoContainer>
-            <p>Movies appeared in</p>
+            <p></p>
             <ul>
                 {state.map(film => {
                     // console.log('filmsarray map', film)
-                    return <li>{film.data.title}</li>
+                    return <li>{film.data.name}</li>
                 })}    
             </ul>
         </MovieInfoContainer>
     )
 }
 
-export default Films;
+export default Starships;
