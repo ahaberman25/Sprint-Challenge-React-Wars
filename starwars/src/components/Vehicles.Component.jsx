@@ -16,23 +16,32 @@ const Vehicles = (props) => {
                 console.log(res)
                 setState(res)
             })
-    }, [])  
+    }, [props])  
 
-    const MovieInfoContainer = styled.div`
-        width: 49%;
+    const VehiclesContainer = styled.div`
+       width: 100%;
+    `;
+    const VehiclesHeader = styled.p`
+        font-weight: bold;
+    `;
+    const VehiclesUl = styled.ul`
+        display: flex;
+        flex-direction: row;
+    `;
+    const VehiclesLi = styled.li` 
+        padding-left: 20px;
+        list-style: none;
     `;
 
-
     return (
-        <MovieInfoContainer>
-            <p></p>
-            <ul>
+        <VehiclesContainer>
+            <VehiclesHeader>Vehicles:</VehiclesHeader>
+            <VehiclesUl>
                 {state.map(film => {
-                    // console.log('filmsarray map', film)
-                    return <li>{film.data.name}</li>
+                    return <VehiclesLi>{film.data.name}</VehiclesLi>
                 })}    
-            </ul>
-        </MovieInfoContainer>
+            </VehiclesUl>
+        </VehiclesContainer>
     )
 }
 

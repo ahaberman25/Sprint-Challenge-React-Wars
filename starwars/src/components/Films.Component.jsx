@@ -16,22 +16,32 @@ const Films = (props) => {
                 console.log(res)
                 setState(res)
             })
-    }, [])  
+    }, [props])  
 
     const MovieInfoContainer = styled.div`
         width: 49%;
+    `;
+    const MovieInfoHeader = styled.p`
+        font-weight: bold;
+    `;
+    const MovieInfoUl = styled.ul`
+        display: flex;
+        flex-direction: column;
+    `;
+    const MovieInfoLi = styled.li` 
+        list-style: none;
+        padding-top: 5px;
     `;
 
 
     return (
         <MovieInfoContainer>
-            <p>Movies appeared in</p>
-            <ul>
+            <MovieInfoHeader>Movies appeared in</MovieInfoHeader>
+            <MovieInfoUl>
                 {state.map(film => {
-                    // console.log('filmsarray map', film)
-                    return <li>{film.data.title}</li>
+                    return <MovieInfoLi>{film.data.title}</MovieInfoLi>
                 })}    
-            </ul>
+            </MovieInfoUl>
         </MovieInfoContainer>
     )
 }

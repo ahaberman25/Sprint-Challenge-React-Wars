@@ -17,6 +17,11 @@ const PersonCard = (props) => {
     `;
     const PersonalInfoContainer = styled.div`
         display: flex;
+        flex-wrap: wrap;
+    `;
+    const InfoRow = styled.div`
+        display: flex;
+        flex-wrap: wrap;
     `;
 
 
@@ -26,8 +31,10 @@ const PersonCard = (props) => {
                 <PersonalInfoContainer>
                     <PersonalInfo info={props.person} />
                     <Films movies={props.person} />
-                    <Vehicles vehicle={props.person} />
-                    <Starships starship={props.person} />
+                    <InfoRow>
+                        <Vehicles vehicle={props.person} />
+                        <Starships starship={props.person} />
+                    </InfoRow>
                 </PersonalInfoContainer>
         </Container>
     )

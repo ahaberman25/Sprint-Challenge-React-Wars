@@ -12,11 +12,11 @@ const PersonalInfo = (props) => {
     return (
         <PersonalInfoContainer>
             <PersonalInfoTitle>Personal Information</PersonalInfoTitle>
-            <p>Born {props.info.birth_year}</p>
-            <p>Hair Color {props.info.hair_color}</p>
-            <p>Skin Color {props.info.skin_color}</p>
-            <p>Eye Color {props.info.eye_color}</p>
-            <p>Gender {props.info.gender}</p>
+            <p><b>Born:</b> {props.info.birth_year}</p>
+            <p><b>Hair Color:</b> {props.info.hair_color}</p>
+            <p><b>Skin Color:</b> {props.info.skin_color}</p>
+            <p><b>Eye Color:</b> {props.info.eye_color}</p>
+            <p><b>Gender:</b> {props.info.gender}</p>
         </PersonalInfoContainer>
     )
 }
