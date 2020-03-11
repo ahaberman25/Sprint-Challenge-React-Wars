@@ -12,7 +12,7 @@ const Starships = (props) => {
         axios.all(props.starship.starships.map(l => axios.get(l)))
             .then(res => {
                 // all requests are now complete
-                console.log(res)
+                // console.log(res)
                 setState(res)
             })
     }, [props])  

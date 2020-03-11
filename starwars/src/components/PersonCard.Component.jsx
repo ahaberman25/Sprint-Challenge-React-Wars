@@ -3,6 +3,8 @@ import PersonalInfo from './PersonalInfo.Component'
 import Films from './Films.Component'
 import Vehicles from './Vehicles.Component'
 import Starships from './Starships.Component'
+import Species from './Species.Component'
+
 import styled from 'styled-components'
 
 const PersonCard = (props) => {
@@ -28,7 +30,8 @@ const PersonCard = (props) => {
     return (
         // all data pulled here
         <Container>
-            <h1>{props.person.name}</h1>
+            <h1>{props.person.name}</h1>            
+            <Species species={props.person} />
                 <PersonalInfoContainer>
                     <PersonalInfo info={props.person} />
                     <Films movies={props.person} />

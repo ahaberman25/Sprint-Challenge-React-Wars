@@ -13,7 +13,7 @@ const Vehicles = (props) => {
         axios.all(props.vehicle.vehicles.map(l => axios.get(l)))
             .then(res => {
                 // all requests are now complete
-                console.log(res)
+                // console.log(res)
                 setState(res)
             })
     }, [props])  
