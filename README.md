@@ -26,13 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+  ReactJs is an open-source JavaScript library that is used to build user interfaces specifically. This is usually used for single-page applications. It is used to handle all views of an application for any web or mobile applications. ReactJS is also used to reuse UI components. React enables developers to create web applications that can change your data without reloading your page. The main advantage of React JS is that it is scalable, simple and fast. It also corresponds to a view in the MVC template. It usually acts as a combination of JavaScript libraries or frameworks.
+
 - [ ] What does it mean to _think_ in react?
+
+  React is made up of many components so it forces you to think in pieces to create the bigger picture
 
 - [ ] Describe state.
 
+  A state is setting the default for a variable that can be manipulated and updated in the code later on
+
 - [ ] Describe props.
 
+  Props are passed from one component to another using a variable to allow data to flow from component to component
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+  Side effects are basically anything that affects something outside of the scope of the current function that's being executed.
 
 ## Project Set Up
 
