@@ -30,7 +30,7 @@ const PersonCard = (props) => {
     return (
         // all data pulled here
         <Container>
-            <h1>{props.person.name}</h1>            
+            <h1><a href={`https://en.wikipedia.org/wiki/${props.person.name}`}>{props.person.name}</a></h1>            
             <Species species={props.person} />
                 <PersonalInfoContainer>
                     <PersonalInfo info={props.person} />

@@ -4,6 +4,7 @@ import PersonCard from './components/PersonCard.Component'
 import styled from 'styled-components'
 
 import './App.css';
+import ReactLogo from './img/react_wars_logo.PNG'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -38,7 +39,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <img src={ReactLogo} />
       <Container>
         {sw.map(item => {
           return <PersonCard person={item} key={item.name} />

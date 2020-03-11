@@ -45,7 +45,7 @@ const Starships = (props) => {
                     if (props.starship.starships === []) {
                         return <p>N/A</p>  
                     } else {
-                        return <StarshipLi>{film.data.name}</StarshipLi>                      
+                        return <StarshipLi><a href={`https://en.wikipedia.org/wiki/${film.data.name}`}>{film.data.name}</a></StarshipLi>                      
                     }
                 })}    
             </StarshipUl>
